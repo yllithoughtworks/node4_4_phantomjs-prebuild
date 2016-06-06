@@ -4,6 +4,7 @@ from node:5.11
 ENV PHANTOMJS_VERSION 2.1.1
 
 # Commands
+
 RUN \
   apt-get update && \
   apt-get upgrade -y && \
@@ -18,6 +19,6 @@ RUN \
   ln -s /srv/var/casperjs/bin/casperjs /usr/bin/casperjs && \
   apt-get autoremove -y && \
   apt-get clean all
-
+USER go
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 

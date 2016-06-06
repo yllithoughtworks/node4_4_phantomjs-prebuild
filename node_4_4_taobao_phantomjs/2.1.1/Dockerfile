@@ -19,4 +19,5 @@ RUN \
   apt-get autoremove -y && \
   apt-get clean all
 
+USER go
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
